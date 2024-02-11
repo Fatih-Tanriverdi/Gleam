@@ -1,0 +1,23 @@
+%align-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%flex-start {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+%align-start {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+%space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

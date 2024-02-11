@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+
+.gleamNavbarContainer {
+    @extend %align-center;
+    color: $colorthree;
+    width: 100%;
+
+    &>.gleamNavbarContainerLeft {
+        @extend %flex-start;
+        width: 80%;
+        margin: 1rem;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        background-color: $colorone;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+
+        &>.gleamLogo {
+            height: 2.5rem;
+            margin-right: 0.5rem;
+        }
+
+        &>.gleamNavbarContainerMenu {
+            @extend %align-center;
+            background-color: $colortwo;
+            margin: 0rem 5rem 0rem 5rem;
+            padding: 0.4rem;
+            border-radius: 0.5rem;
+            width: 100%;
+
+            &>ul {
+                @extend %align-center;
+
+                &>li {
+                    margin: 0rem 0.5rem 0rem 0.5rem;
+                    border-radius: 0.2rem;
+                    color: $colorthree;
+                    padding: 0.2rem;
+                    font-size: 1rem;
+                    background-color: $colorone;
+                    font-weight: bold;
+                    list-style: none;
+                    transition: all 0.2s ease-in-out;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: $colorfour;
+                        color: $colortwo;
+                    }
+                }
+            }
+        }
+
+        &>h2 {
+            font-family: 'Handlee', cursive;
+            background-color: $colorone;
+        }
+    }
+
+    &>.gleamNavbarContainerRight {
+        @extend %align-center;
+        width: 20%;
+        margin: 1rem;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        background-color: $colorone;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+
+        &>.loginButton,
+        &>.registerButton {
+            @extend %align-center;
+            background-color: $colorfour !important;
+            color: $colorthree !important;
+            margin: 0rem 1rem 0rem 1rem;
+
+            &>.MuiSvgIcon-root {
+                color: $colortwo !important;
+            }
+        }
+    }
+}
+
+.gleamContentContainer {
+    @extend %align-center;
+    color: $colorthree;
+    width: 100%;
+    height: 80vh;
+
+    &>.gleamContentContainerLeft {
+        @extend %align-center;
+        flex-direction: column;
+        width: 50%;
+
+        &>.registerButton {
+            @extend %align-center;
+            background-color: $colorfour !important;
+            color: $colortwo !important;
+            margin: 0rem 1rem 0rem 1rem;
+
+            &>.MuiSvgIcon-root {
+                margin-left: 0.3rem;
+                color: $colortwo !important;
+            }
+        }
+
+        &>h1 {
+            text-align: center;
+            font-weight: bold;
+            padding: 6rem;
+
+            &>mark {
+                background-color: $colorthree;
+                border-radius: 0.5rem;
+                padding: 0rem 0.5rem 0rem 0.5rem;
+                font-family: 'Handlee', cursive;
+            }
+        }
+    }
+
+    &>.gleamContentContainerRight {
+        @extend %align-center;
+        width: 50%;
+
+        &>.gleamPhoto {
+            height: 30rem;
+        }
+    }
+}
+
+.gleamFooterContainer {
+    @extend %align-center;
+    flex-direction: column;
+    height: 25vh;
+    border-top-left-radius: 100% 200%;
+    border-top-right-radius: 100% 200%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    transform: translateY(50%);
+    background-color: $colorone;
+    color: $colorthree;
+
+    &>.gleamFooterTop {
+        @extend %align-center;
+        height: 70%;
+
+        &>.gleamFooterTopInfoCard {
+            @extend %align-start;
+            flex-direction: column;
+            padding: 1rem;
+            height: 80%;
+            width: 18%;
+
+            &:hover {
+                background-color: $colorthree;
+                color: $colortwo;
+                border-radius: 0.5rem;
+                cursor: pointer;
+            }
+
+            &>h4 {
+                border-bottom: 0.1rem solid $colorthree;
+
+                &:hover {
+                    border-bottom: 0.1rem solid $colortwo;
+                }
+            }
+
+            &>p {
+                @extend %flex-start;
+                margin-top: 0.5rem;
+                font-size: 0.7rem;
+            }
+        }
+    }
+
+    &>.gleamFooterBottom {
+        @extend %space-between;
+        height: 20%;
+        width: 75%;
+        border-top: 0.1rem solid $colorfour;
+
+        &>.gleamFooterBottomLogo {
+            @extend %align-center;
+
+            &>.gleamLogoFooter {
+                margin-right: 0.3rem;
+                height: 1rem;
+            }
+
+            &>h6 {
+                font-family: 'Handlee', cursive;
+            }
+        }
+    }
+}
