@@ -3,15 +3,22 @@
 .gleamNavbarContainer {
     @extend %align-center;
     color: $colorthree;
+    margin-bottom: 7rem;
     width: 100%;
 
     &>.gleamNavbarContainerLeft {
         @extend %flex-start;
-        width: 80%;
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 75%;
+        z-index: 999;
         margin: 1rem;
         padding: 1rem;
         border-radius: 0.5rem;
-        background-color: $colorone;
+        background-color: rgba(35, 35, 41, 0.5);
+        backdrop-filter: blur(5px);
         box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
 
         &>.gleamLogo {
@@ -22,23 +29,23 @@
         &>.gleamNavbarContainerMenu {
             @extend %align-center;
             background-color: $colortwo;
-            margin: 0rem 5rem 0rem 5rem;
-            padding: 0.4rem;
+            margin: 0rem 4rem 0rem 4rem;
             border-radius: 0.5rem;
             width: 100%;
 
             &>ul {
                 @extend %align-center;
+                list-style: none;
+                padding: 0.4rem;
 
                 &>li {
+                    @extend %align-center;
                     margin: 0rem 0.5rem 0rem 0.5rem;
                     border-radius: 0.2rem;
                     color: $colorthree;
-                    padding: 0.2rem;
-                    font-size: 1rem;
+                    padding: 0.2rem 0.5rem 0.2rem 0.5rem;
                     background-color: $colorone;
                     font-weight: bold;
-                    list-style: none;
                     transition: all 0.2s ease-in-out;
                     cursor: pointer;
 
@@ -52,22 +59,28 @@
 
         &>h2 {
             font-family: 'Handlee', cursive;
-            background-color: $colorone;
         }
     }
 
     &>.gleamNavbarContainerRight {
         @extend %align-center;
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        right: 0;
         width: 20%;
         margin: 1rem;
         padding: 1rem;
+        z-index: 999;
         border-radius: 0.5rem;
-        background-color: $colorone;
+        background-color: rgba(35, 35, 41, 0.5);
+        backdrop-filter: blur(5px);
         box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
 
         &>.loginButton,
         &>.registerButton {
             @extend %align-center;
+            height: 2.5rem;
             background-color: $colorfour !important;
             color: $colorthree !important;
             margin: 0rem 1rem 0rem 1rem;
@@ -75,53 +88,6 @@
             &>.MuiSvgIcon-root {
                 color: $colortwo !important;
             }
-        }
-    }
-}
-
-.gleamContentContainer {
-    @extend %align-center;
-    color: $colorthree;
-    width: 100%;
-    height: 80vh;
-
-    &>.gleamContentContainerLeft {
-        @extend %align-center;
-        flex-direction: column;
-        width: 50%;
-
-        &>.registerButton {
-            @extend %align-center;
-            background-color: $colorfour !important;
-            color: $colortwo !important;
-            margin: 0rem 1rem 0rem 1rem;
-
-            &>.MuiSvgIcon-root {
-                margin-left: 0.3rem;
-                color: $colortwo !important;
-            }
-        }
-
-        &>h1 {
-            text-align: center;
-            font-weight: bold;
-            padding: 6rem;
-
-            &>mark {
-                background-color: $colorthree;
-                border-radius: 0.5rem;
-                padding: 0rem 0.5rem 0rem 0.5rem;
-                font-family: 'Handlee', cursive;
-            }
-        }
-    }
-
-    &>.gleamContentContainerRight {
-        @extend %align-center;
-        width: 50%;
-
-        &>.gleamPhoto {
-            height: 30rem;
         }
     }
 }
@@ -137,6 +103,7 @@
     transform: translateY(50%);
     background-color: $colorone;
     color: $colorthree;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
 
     &>.gleamFooterTop {
         @extend %align-center;
@@ -146,22 +113,16 @@
             @extend %align-start;
             flex-direction: column;
             padding: 1rem;
+            margin: 0.5rem;
             height: 80%;
-            width: 18%;
+            width: 15%;
+            transition: all 0.2s ease-in-out;
 
             &:hover {
                 background-color: $colorthree;
                 color: $colortwo;
                 border-radius: 0.5rem;
                 cursor: pointer;
-            }
-
-            &>h4 {
-                border-bottom: 0.1rem solid $colorthree;
-
-                &:hover {
-                    border-bottom: 0.1rem solid $colortwo;
-                }
             }
 
             &>p {

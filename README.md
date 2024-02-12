@@ -2,7 +2,22 @@
 
 Gleam, notlarınızı tutmanıza ve tamamlama sürelerini yönetmenize olanak sağlayan bir web uygulamasıdır. Bu uygulama, kullanıcıların notlarını eklemelerine, düzenlemelerine ve zamanlayıcılarla birlikte tamamlama sürelerini belirlemelerine olanak tanır. Ayrıca, popüler Pomodoro Tekniği'ni uygulayarak verimliliği artırmak için entegre bir zaman yönetimi aracı sunar.
 
-![Gleame - Ana Sayfa](images/GleamAnaSayfa.png)
+![Gleame - Ana Sayfa](./public/images/GleamAnaSayfa.png)
+
+----
+
+![Gleame - Ana Sayfa](./public/images/GleamAnaSayfa2.png)
+
+----
+
+## Projede aşağıdaki teknolojiler kullanılmaktadır:
+
+- React
+- TypeScript
+- Redux
+- Firebase
+- Material UI
+
 
 ## Özellikler
 

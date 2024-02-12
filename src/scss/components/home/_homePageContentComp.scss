@@ -1,0 +1,123 @@
+.gleamContentContainer {
+    @extend %align-center;
+    position: relative;
+    overflow: hidden;
+    color: $colorthree;
+    width: 100%;
+    height: 80vh;
+
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        background-color: $colorone;
+        z-index: 1;
+    }
+
+    &>.gleamContentContainerLeft {
+        @extend %align-center;
+        flex-direction: column;
+        position: relative;
+        z-index: 2;
+        width: 50%;
+
+        &>.registerButton {
+            @extend %align-center;
+            background-color: $colorfour !important;
+            color: $colortwo !important;
+
+            &>.MuiSvgIcon-root {
+                margin-left: 0.3rem;
+                color: $colortwo !important;
+            }
+        }
+
+        &>h1 {
+            text-align: center;
+            font-weight: bold;
+            padding: 6rem;
+
+            &>mark {
+                background-color: $colorthree;
+                border-radius: 0.5rem;
+                padding: 0rem 0.5rem 0rem 0.5rem;
+                font-family: 'Handlee', cursive;
+            }
+        }
+    }
+
+    &>.gleamContentContainerRight {
+        @extend %align-center;
+        position: relative;
+        z-index: 2;
+        width: 50%;
+
+        &>.gleamPhoto {
+            height: 30rem;
+        }
+    }
+}
+
+.gleamContentExtraInfoContainer {
+    @extend %align-center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 50vh;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 55%;
+        background-color: $colorone;
+        z-index: 1;
+    }
+
+    &>.gleamContentExtraInfoBody {
+        @extend %align-center;
+        width: 85%;
+        background-color: $colortwo;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+        border-radius: 0.5rem;
+        position: relative;
+        z-index: 2;
+
+        &>.gleamContentExtraInfoCard {
+            @extend %align-start;
+            flex-direction: column;
+            background-color: #212328;
+            color: $colorthree;
+            width: 25%;
+            height: 20vh;
+            padding: 1rem;
+            margin: 1rem;
+            border-radius: 0.5rem;
+            box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+
+            &>h4 {
+                font-size: 0.8rem;
+                margin-bottom: 0.5rem;
+            }
+
+            &>p {
+                font-size: 0.7rem;
+            }
+        }
+    }
+
+    &>h2 {
+        width: 85%;
+        color: $colorthree;
+        margin: 2rem;
+        font-family: 'Handlee', cursive;
+        position: relative;
+        z-index: 2;
+    }
+}

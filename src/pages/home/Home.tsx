@@ -1,10 +1,13 @@
-import { Button } from '@mui/material';
 import '../../scss/styles.scss';
-import { ArrowCircleRightOutlined, Login, PersonAddAlt1 } from '@mui/icons-material';
+import { Button } from '@mui/material';
+import { Login, PersonAddAlt1 } from '@mui/icons-material';
+import ScroolButton from '../../components/scroolButton/ScroolButton';
+import HomePageContentComp from '../../components/home/HomePageContentComp';
 
 type Props = {}
 
-export default function Home({ }: Props) {
+const Home = (props: Props) => {
+
     return (
         <div className='gleamHomePageContainer'>
             <div className='gleamNavbarContainer'>
@@ -16,6 +19,7 @@ export default function Home({ }: Props) {
                             <li>Anasayfa</li>
                             <li>Hizmetler</li>
                             <li>Hakkımızda</li>
+                            <li>İletişim</li>
                         </ul>
                     </div>
                 </div>
@@ -28,25 +32,12 @@ export default function Home({ }: Props) {
                     </Button>
                 </div>
             </div>
-            <div className='gleamContentContainer'>
-                <div className='gleamContentContainerLeft'>
-                    <h1>
-                        Yaratıcılığınızı parlatın, adımlarınızı kaydedin! <mark>Gleam</mark>, notlarınızı tutmanın ve ilerlemenizi takip etmenin en iyi yolu.
-                    </h1>
-                    <Button className='registerButton'>
-                        <b>Keşfetmek için</b>
-                        <ArrowCircleRightOutlined />
-                    </Button>
-                </div>
-                <div className='gleamContentContainerRight'>
-                    <img alt='gleamPhoto' className='gleamPhoto' src='./images/Gleam-Photo.webp' />
-                </div>
-            </div>
+            <HomePageContentComp />
             <div className='gleamFooterContainer'>
                 <div className='gleamFooterTop'>
                     <div className='gleamFooterTopInfoCard'>
                         <h4>Gleam Hakkında</h4>
-                        <p>Panoların ardında ne var ?</p>
+                        <p>Gleam, notlarınızı anında organize eder, süreçlerinizi yönetir.</p>
                     </div>
                     <div className='gleamFooterTopInfoCard'>
                         <h4>Uygulamalar</h4>
@@ -65,6 +56,9 @@ export default function Home({ }: Props) {
                     <h5>© Copyright - 2024 </h5>
                 </div>
             </div>
+            <ScroolButton />
         </div>
     )
 }
+
+export default Home;
