@@ -1,12 +1,18 @@
+import React from 'react';
 import '../../scss/styles.scss';
 import { Button } from '@mui/material';
 import { Login, PersonAddAlt1 } from '@mui/icons-material';
 import ScroolButton from '../../components/scroolButton/ScroolButton';
 import HomePageContentComp from '../../components/home/HomePageContentComp';
+import LoginComp from '../../components/loginComp/LoginComp';
 
 type Props = {}
 
 const Home = (props: Props) => {
+
+    const [open, setOpen] = React.useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
 
     return (
         <div className='gleamHomePageContainer'>
@@ -24,7 +30,7 @@ const Home = (props: Props) => {
                     </div>
                 </div>
                 <div className='gleamNavbarContainerRight'>
-                    <Button className='loginButton'>
+                    <Button className='loginButton' onClick={handleOpen}>
                         <Login />
                     </Button>
                     <Button className='registerButton'>
@@ -33,6 +39,7 @@ const Home = (props: Props) => {
                 </div>
             </div>
             <HomePageContentComp />
+            <LoginComp open={open} handleClose={handleClose} />
             <div className='gleamFooterContainer'>
                 <div className='gleamFooterTop'>
                     <div className='gleamFooterTopInfoCard'>

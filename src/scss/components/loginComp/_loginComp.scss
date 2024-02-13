@@ -1,0 +1,84 @@
+.loginCompContainer {
+    @extend %align-center;
+}
+
+.loginModalStyle {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(135%, 13%);
+    width: 400px;
+    height: 80vh;
+    border-radius: 0.5rem !important;
+    background-color: #3A394D;
+    color: $colorthree;
+    border-radius: 0.5rem;
+    padding: 16px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+
+    &>.loginModalBody {
+        @extend %align-center;
+        flex-direction: column;
+        width: 100%;
+
+        &>.loginButtonCustom {
+            width: 90%;
+            height: 3rem;
+            margin-top: 2rem;
+            background-color: $colorfour;
+            color: $colortwo;
+
+            &:hover {
+                background-color: $colortwo;
+                color: $colorthree;
+            }
+        }
+
+        &>.line {
+            width: 90%;
+            background-color: $colorthree;
+            margin-top: 2rem;
+            height: 0.1rem;
+        }
+
+        &>.loginPageForgotPasswordContainer {
+            width: 90%;
+
+            &>.loginPageForgotPassword {
+                @extend %flex-start;
+                width: 35%;
+                color: $colorthree;
+                text-decoration: none;
+                margin-top: 1rem;
+
+                &:hover {
+                    border-bottom: 0.1rem solid $colorfour;
+                }
+            }
+        }
+    }
+}
+
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: $colorfour !important;
+}
+
+.MuiFormLabel-root {
+    color: $colorthree !important;
+}
+
+// .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
+//     border: 0.1rem solid $colorthree !important;
+//     border-radius: 0.2rem;
+// }
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(0.2rem);
+    z-index: 999;
+}

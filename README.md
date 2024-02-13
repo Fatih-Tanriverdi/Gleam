@@ -14,6 +14,7 @@ Gleam, notlarınızı tutmanıza ve tamamlama sürelerini yönetmenize olanak sa
 
 - React
 - TypeScript
+- SCSS
 - Redux
 - Firebase
 - Material UI
